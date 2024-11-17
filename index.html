@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter</title>
+    <link rel="stylesheet" href="styles/style-game.css">
+    <link rel="shortcut icon" href="styles/img/logo-sp-sh-ivon=page.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+    <audio id="backgroundMusic" loop>
+        <source src="./sounds/background.mp3" type="audio/mp3">
+    </audio>
+    <div id="startScreen">
+        <img src="styles/img/logo.svg" alt="Logo Space Shooter" class="game-logo">
+        <p>Bem-vindo ao Space Shooter!</p>
+        <h2> Regras do Jogo:</h2>
+        <p>1. Use as teclas w, a, s, d para mover o jogador.</p>
+        <p>2. Use o botão esquerdo do mouse para atirar .</p>
+        <p>3. Use o mouse para acertar os inimigos.</p>
+        <p>4. Evite os inimigos.</p>
+        <div class="input-container">
+            <input type="text" id="playerName" placeholder="Insira seu nome" maxlength="15">
+            <button id="startButton">Começar Jogo</button>
+        </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="gameOverScreen">
+        <h1>Game Over!</h1>
+        <p id="finalScore">Final Score: 0</p>
+      
+        
+        <div class="rating-section">
+            <h3>Avalie sua experiência:</h3>
+            <div class="star-rating">
+                <span class="star" data-rating="5">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="1">★</span>
+            </div>
+            <textarea id="feedback" placeholder="Deixe seu comentário (opcional)" maxlength="200"></textarea>
+            <button id="submitRating">Enviar Avaliação</button>
+        </div>
+        
+        <button id="restartButton">Restart</button>
+    </div>
+    <div class="hud">
+        <div class="score">Score: <span id="scoreDisplay">0</span></div>
+        <div class="level">Level: <span id="levelDisplay">1</span></div>
+        <div class="health-bar">
+            <div id="healthDisplay" class="health"></div>
+        </div>
+    </div>
+    <div id="highScoresTable">
+        <div class="scores-header">
+            <h2>Ranking de Jogadores</h2>
+        </div>
+        <div class="scores-container">
+            <table id="scoresTable">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                        <th>Level</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody id="scoresBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="customizationScreen" style="display: none;">
+        <h2>Personalize seu Jogador</h2>
+        
+        <div class="customization-section">
+            <h3>Cor do Personagem</h3>
+            <div class="color-picker">
+                <button class="color-option" data-color="#2196F3" style="background-color: #2196F3;"></button>
+                <button class="color-option" data-color="#FF4081" style="background-color: #FF4081;"></button>
+                <button class="color-option" data-color="#4CAF50" style="background-color: #4CAF50;"></button>
+                <button class="color-option" data-color="#FFC107" style="background-color: #FFC107;"></button>
+            </div>
+        </div>
+
+        <div class="customization-section">
+            <h3>Formato do Personagem</h3>
+            <div class="shape-picker">
+                <button class="shape-option" data-shape="triangle">▲</button>
+                <button class="shape-option" data-shape="square">■</button>
+                <button class="shape-option" data-shape="circle">●</button>
+            </div>
+        </div>
+
+        <div class="customization-section">
+            <h3>Cor das Balas</h3>
+            <div class="bullet-color-picker">
+                <button class="bullet-color-option" data-color="#FFFFFF" style="background-color: #FFFFFF;"></button>
+                <button class="bullet-color-option" data-color="#FF4081" style="background-color: #FF4081;"></button>
+                <button class="bullet-color-option" data-color="#4CAF50" style="background-color: #4CAF50;"></button>
+                <button class="bullet-color-option" data-color="#FFC107" style="background-color: #FFC107;"></button>
+            </div>
+        </div>
+
+        <button id="startGameButton">Começar Jogo</button>
+    </div>
+    <div id="ratingsScreen" style="display: none;">
+        <h2>Avaliações dos Jogadores</h2>
+        <div class="ratings-stats">
+            <div class="average-rating">
+                <h3>Média Geral</h3>
+                <p id="averageRatingDisplay">0 ★</p>
+            </div>
+            <div class="total-ratings">
+                <h3>Total de Avaliações</h3>
+                <p id="totalRatingsDisplay">0</p>
+            </div>
+        </div>
+        <div class="ratings-list"></div>
+        <button id="closeRatingsButton">Voltar</button>
+    </div>
+    <script src="scripts/sound.js"></script>
+    <script src="scripts/game.js"></script>
+
+    <footer class="footer">
+        <p>&copy; 2024 P.J.D. - Desenvolvido por Isaque Soares</p>
+    </footer>
+</body>
+</html>

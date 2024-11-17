@@ -1,0 +1,60 @@
+game-dev-project production by zac
+# Space Shooter Game
+
+## English Description
+
+A thrilling space shooter game where players navigate through waves of enemies while testing their reflexes and shooting skills. 
+
+### Features:
+- Dynamic player movement with mouse and keyboard controls
+- Multiple enemy types with different behaviors
+- Power-ups and health system
+- Score tracking and leveling system
+- Particle effects and visual feedback
+- Background music and sound effects
+- Rating system for player feedback
+- Administrative panel for game statistics
+
+### Technical Details:
+- Built with vanilla JavaScript and HTML5 Canvas
+- Local storage for saving scores and ratings
+- Responsive design
+- Customizable player settings
+- Excel export functionality for game data
+
+### Controls:
+- WASD or Arrow Keys: Move the player
+- Mouse: Aim
+- Left Click: Shoot
+- Space: Special ability
+
+---
+
+# Jogo Space Shooter
+
+## Descrição em Português
+
+Um emocionante jogo de tiro espacial onde os jogadores navegam através de ondas de inimigos enquanto testam seus reflexos e habilidades de tiro.
+
+### Características:
+- Movimento dinâmico do jogador com controles de mouse e teclado
+- Múltiplos tipos de inimigos com diferentes comportamentos
+- Power-ups e sistema de vida
+- Sistema de pontuação e níveis
+- Efeitos de partículas e feedback visual
+- Música de fundo e efeitos sonoros
+- Sistema de avaliação para feedback dos jogadores
+- Painel administrativo para estatísticas do jogo
+
+### Detalhes Técnicos:
+- Construído com JavaScript puro e HTML5 Canvas
+- Armazenamento local para salvar pontuações e avaliações
+- Design responsivo
+- Configurações personalizáveis do jogador
+- Funcionalidade de exportação para Excel dos dados do jogo
+
+### Controles:
+- WASD ou Setas: Mover o jogador
+- Mouse: Mirar
+- Clique Esquerdo: Atirar
+- Espaço: Habilidade especial
